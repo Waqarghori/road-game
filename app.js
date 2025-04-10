@@ -1,4 +1,6 @@
+let carForwerd = 0
+
 window.addEventListener("keydown",function(event){
-    console.log(che);
-    
+
+    console.log(event.keyCode); 
 })
