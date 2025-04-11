@@ -8,16 +8,13 @@
 </head>
 <body>
     <div class="container">
-
+        <div class="btn">
+        <button class="play" onclick="play()">play</button>
+    </div>
         <div class="traffic-signal">
-            <input onclick="" type="radio" name="light" id="red">
-            <label for="red"><div class="light red"></div></label>
-        
-            <input type="radio" name="light" id="yellow">
-            <label for="yellow"><div class="light yellow"></div></label>
-        
-            <input onclick="carGo()" type="radio" name="light" id="green">
-            <label for="green"><div class="light green"></div></label>
+            <div class="red light"></div>
+            <div class="yellow light"></div>
+            <div class="green light"></div>
           </div>
 
         <div id="car" class="car-cont">
