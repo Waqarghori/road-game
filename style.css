@@ -1,18 +1,66 @@
-body{
-    padding: 0;
-    margin: 0;
-}
+body {
+    margin: 0px;
+    padding: opx;
+  }
+
+  .traffic-signal {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(53, 49, 49, 0.6);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    border: 2px solid gray;
+    margin-top: 80px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .light {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: 0.3s;
+    box-shadow: none;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  /* Lights default colors */
+  .red { background-color: red; }
+  .yellow { background-color: yellow; }
+  .green { background-color: green; }
+
+  /* When checked, increase opacity and add glow */
+  #red:checked + label .red,
+  #yellow:checked + label .yellow,
+  #green:checked + label .green {
+    opacity: 2;
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.4);
+  }
 .container{
     width: 100%;
     height: 100vh;
     background-image: url(https://t3.ftcdn.net/jpg/01/98/18/50/360_F_198185081_8Lb9hV6sm695jb6g2er3HI89FBv01oPz.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 .car-cont{
     position: absolute;
     bottom: 80px;
+    left: 10px;
     transform: scaleX(-1)
 }
 .car {
