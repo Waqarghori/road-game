@@ -26,7 +26,7 @@ function play(){
             red.style.background = "red";
             green.style.background = "#034b03";
         }
-        if(timer > 6 && timer < 10){
+        if(timer > 6 && timer <= 7){
             red.style.background = "#810b0b";
             yellow.style.background = "yellow";
         }
