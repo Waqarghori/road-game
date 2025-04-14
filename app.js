@@ -30,7 +30,7 @@ function play(){
             red.style.background = "#810b0b";
             yellow.style.background = "yellow";
         }
-        if(timer > 7 && timer < 11){
+        if(timer > 7 && timer < 12){
             clearInterval(carInterval);
             carInterval = setInterval(function(){
                 carForward += 2;
@@ -40,7 +40,7 @@ function play(){
             yellow.style.background = "#818106";
             red.style.background = "#810b0b";
         }
-        if(timer > 11){
+        if(timer >= 12){
             clearInterval(carInterval);
             car.style.left = `${carForward}px`
             red.style.background = "red";
