@@ -59,8 +59,26 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   }
-  
-  .play:hover {
+  .play1 {
+    text-decoration: none;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.6); /* Transparent white */
+    color: black;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);               /* Glass effect */
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+  }
+  .play:hover,
+  .play1:hover{
     background-color: rgba(255, 255, 255, 0.2);  /* Slightly more visible on hover */
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);

@@ -5,6 +5,7 @@ let car = document.getElementById("car");
 let red = document.querySelector(".red");
 let green = document.querySelector(".green");
 let yellow = document.querySelector(".yellow");
+let btn = document.querySelector(".play")
 let carForward = 10;
 let timer = 0;
 let carInterval;
@@ -25,11 +26,12 @@ function play(){
             red.style.background = "red";
             green.style.background = "#034b03";
         }
-        if(timer === 6){
+        if(timer > 6 && timer < 10){
             red.style.background = "#810b0b";
             yellow.style.background = "yellow";
         }
         if(timer > 7 && timer < 11){
+            clearInterval(carInterval);
             carInterval = setInterval(function(){
                 carForward += 2;
                 car.style.left = `${carForward}px`
@@ -37,6 +39,15 @@ function play(){
             green.style.background = "#05fb05";
             yellow.style.background = "#818106";
             red.style.background = "#810b0b";
+        }
+        if(timer > 11){
+            clearInterval(carInterval);
+            car.style.left = `${carForward}px`
+            red.style.background = "red";
+            yellow.style.background = "#818106";
+            green.style.background = "#034b03";
+            btn.parentNode.innerHTML = '<a href="index.html"><button class="play1">Reload and play again</button></a>';
+            clearInterval(timerInterval);
         }
 
     }, 1000)
